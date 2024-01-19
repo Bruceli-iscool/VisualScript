@@ -1,6 +1,12 @@
 # change python syntax and define functions
 import tokenize
 from io import BytesIO
+from tkinter import * 
+import turtle
+
+
+
+
 
 def process_code(file):
     keys = {
@@ -11,17 +17,22 @@ def process_code(file):
         "define":"def",
         "convertInt":"int",
         "convertStr":"str",
-        "else if":"elif"
+        "else if":"elif",
+        
+
     }
-    def append(list, value):
-        result_list = list.append(value)
-        return result_list
-    def test(value):
-        print(value)
-        return
+    def add(num1, num2):
+        x = num1+num2
+        return x
+    def window(title):
+        window = Tk()
+        window.title(title)
+        return window
+
+
+
     custom_features = {
-        "append":append,
-        "test":test
+       
     }
 
     with open(file, "rb") as source:
@@ -44,7 +55,7 @@ def process_code(file):
 
 if __name__ == "__main__":
     try:
-        process_code("/workspaces/VisualScript/src/example.vs")
+        process_code("C:/Users/isano/OneDrive/Documents/GitHub/VisualScript/src/example.vs")
     except Exception as e:
         print(f"An error occurred: {e}")
-    
+  
