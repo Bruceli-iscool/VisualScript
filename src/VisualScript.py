@@ -27,6 +27,7 @@ def process_code(file):
     def window(title):
         window = Tk()
         window.title(title)
+        window.mainloop()
         return window
 
 
