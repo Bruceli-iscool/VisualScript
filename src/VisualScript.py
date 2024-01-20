@@ -21,6 +21,8 @@ def process_code(file):
         
 
     }
+  
+   
     def add(num1, num2):
         x = num1+num2
         return x
@@ -28,7 +30,8 @@ def process_code(file):
         window = Tk()
         window.title(title)
         window.mainloop()
-        return window
+        return 
+        
     def subtract(num1, num2):
         yx = num1-num2
         return yx
@@ -38,6 +41,10 @@ def process_code(file):
     def divide(num1, num2):
         xyx = num1/num2
         return xyx
+    def turtle(color):
+        tur = turtle.Turtle()
+        tur.color(color)
+        return
 
 
 
