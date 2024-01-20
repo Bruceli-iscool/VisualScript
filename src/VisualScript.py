@@ -29,6 +29,15 @@ def process_code(file):
         window.title(title)
         window.mainloop()
         return window
+    def subtract(num1, num2):
+        yx = num1-num2
+        return yx
+    def multiply(num1, num2):
+        xy = num1*num2
+        return xy
+    def divide(num1, num2):
+        xyx = num1/num2
+        return xyx
 
 
 
