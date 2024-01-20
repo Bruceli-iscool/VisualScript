@@ -18,6 +18,7 @@ def process_code(file):
         "convertInt":"int",
         "convertStr":"str",
         "else if":"elif",
+        "//":"#"
         
 
     }
