@@ -72,8 +72,18 @@ def process_code(file):
     def artSpeed(speed):
         tur.turtle.speed(speed)
         return
+    def artColor(color):
+        tur.turtle.color(color)
+        return
+    def artKey(function, key):
+        tur.turtle.onkey(function, key)
+        return
+    def artSpecial(feature):
+        if feature == "stamp":
+            tur.turtle.stamp()
+        elif feature == "dot":
+            tur.turtle.dot()
     
-
 
 
     custom_features = {
