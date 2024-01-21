@@ -1,0 +1,4 @@
+Visualscript:
+1. easy to read
+2. python syntax
+3. ui design
