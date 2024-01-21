@@ -13,7 +13,7 @@ tur = turtle
 def process_code(file):
     keys = {
 
-        "size":"range",
+        "algorithom":"range",
         "log":"print",
         "ask": "input",
         "define":"def",
