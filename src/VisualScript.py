@@ -4,6 +4,8 @@ from io import BytesIO
 from tkinter import * 
 import turtle
 
+tur = turtle
+
 
 
 
@@ -18,12 +20,14 @@ def process_code(file):
         "convertInt":"int",
         "convertStr":"str",
         "else if":"elif",
-        "//":"#"
+        "//":"#",
+        "get":"import"
         
 
     }
   
-   
+    def __init__(self):
+        self = tur
     def add(num1, num2):
         x = num1+num2
         return x
@@ -42,10 +46,32 @@ def process_code(file):
     def divide(num1, num2):
         xyx = num1/num2
         return xyx
-    def turtle(color):
-        tur = turtle.Turtle()
-        tur.color(color)
+    def artboard(color):
+        tur.turtle = turtle.Turtle()
+        tur.turtle.color(color)
         return
+    def artColor(color):
+        tur.turtle.color(color)
+        return
+    def artLeft(amount):
+        tur.turtle.left(amount)
+        return
+    def artRight(amount):
+        tur.turtle.right(amount)
+        return
+    def artForward(amount):
+        tur.turtle.forward(amount)
+        return
+    def artBackward(amount):
+        tur.turtle.backward(amount)
+        return
+    def artClose():
+        tur.turtle.exitonclick()
+        return
+    def artSpeed(speed):
+        tur.turtle.speed(speed)
+        return
+    
 
 
 
