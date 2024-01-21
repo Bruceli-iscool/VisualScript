@@ -21,7 +21,8 @@ def process_code(file):
         "convertStr":"str",
         "else if":"elif",
         "//":"#",
-        "get":"import"
+        "get":"import",
+        "size":"len"
         
 
     }
