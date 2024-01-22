@@ -115,7 +115,7 @@ def process_code(file):
             feature_func()
 
 
-print("VisualScipt\n Enter a filename or exit to exit")
+print("VisualScipt\nEnter a filename or exit to exit")
 if __name__ == "__main__":
     while True:
         filename = input(">>> ")
