@@ -13,7 +13,6 @@ tur = turtle
 def process_code(file):
     keys = {
 
-        "algorithom":"range",
         "log":"print",
         "ask": "input",
         "define":"def",
@@ -22,7 +21,10 @@ def process_code(file):
         "else if":"elif",
         "//":"#",
         "get":"import",
-        "size":"len"
+        "size":"len",
+        "f":"format",
+        "x=":"!="
+        
         
 
     }
@@ -78,11 +80,15 @@ def process_code(file):
     def artKey(function, key):
         tur.turtle.onkey(function, key)
         return
-    def artSpecial(feature):
+    def artStatic(feature):
         if feature == "stamp":
             tur.turtle.stamp()
         elif feature == "dot":
             tur.turtle.dot()
+    def runCode():
+        while True:
+            pass
+    
     
 
 
@@ -108,9 +114,15 @@ def process_code(file):
         if feature_name in globals():
             feature_func()
 
+
+print("VisualScipt\n Enter a filename or exit to exit")
 if __name__ == "__main__":
-    try:
-        process_code("C:/Users/isano/OneDrive/Documents/GitHub/VisualScript/src/example.vs")
-    except Exception as e:
-        print(f"An error occurred: {e}")
+    while True:
+        filename = input(">>> ")
+        if filename.lower() == 'exit':
+            break
+        try:
+            process_code(filename)
+        except Exception as e:
+            print(f"An error occurred: {e}")
   
