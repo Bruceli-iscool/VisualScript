@@ -10,6 +10,7 @@ tur = turtle
 
 
 
+
 def process_code(file):
     keys = {
 
@@ -29,8 +30,8 @@ def process_code(file):
 
     }
   
-    def __init__(self):
-        self = tur
+    def __init__():
+       pass
     def add(num1, num2):
         x = num1+num2
         return x

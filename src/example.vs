@@ -3,6 +3,6 @@ get tkinter
 log("Hello, World")
 
 log(add(1, 2))
-turtle = ''
 artboard("red")
-artRight(1000)
+artLeft(500)
+artForward(100)
