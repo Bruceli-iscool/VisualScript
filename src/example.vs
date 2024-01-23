@@ -6,3 +6,5 @@ log(add(1, 2))
 artboard("red")
 artLeft(500)
 artForward(100)
+window("john")
+

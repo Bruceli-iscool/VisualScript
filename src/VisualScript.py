@@ -86,9 +86,10 @@ def process_code(file):
             tur.turtle.stamp()
         elif feature == "dot":
             tur.turtle.dot()
-    def runCode():
+    def ForeverRun():
         while True:
             pass
+    
     
     
 
@@ -125,5 +126,8 @@ if __name__ == "__main__":
         try:
             process_code(filename)
         except Exception as e:
-            print(f"An error occurred: {e}")
+            if len(filename) < 1:
+                pass
+            else:
+                print(f"An error occurred: {e}")
   
