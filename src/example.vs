@@ -1,10 +1,11 @@
 // this is a comment
-get tkinter
+get tkinter with_name john
 log("Hello, World")
 
 log(add(1, 2))
 artboard("red")
 artLeft(500)
 artForward(100)
-window("john")
-
+def tom():
+    log("Hello world")
+tom()

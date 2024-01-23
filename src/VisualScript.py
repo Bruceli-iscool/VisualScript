@@ -1,12 +1,14 @@
 # change python syntax and define functions
 import tokenize
 from io import BytesIO
+import tkinter
 from tkinter import * 
 import turtle
+import matplotlib
 
 tur = turtle
 
-
+window = tkinter
 
 
 
@@ -24,7 +26,10 @@ def process_code(file):
         "get":"import",
         "size":"len",
         "f":"format",
-        "x=":"!="
+        "x=":"!=",
+        "delete":"del",
+        "with_name":"as"
+        
         
         
 
@@ -36,7 +41,7 @@ def process_code(file):
         x = num1+num2
         return x
     def window(title):
-        window = Tk()
+        window.Tk()
         window.title(title)
         window.mainloop()
         return 
@@ -89,7 +94,11 @@ def process_code(file):
     def ForeverRun():
         while True:
             pass
-    
+    def chart(datasetx, datasety):
+        pass
+    def windowTitle(title):
+        window.title(title)
+        return
     
     
 
