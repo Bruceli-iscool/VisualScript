@@ -57,6 +57,8 @@ def process_code(file):
         return xyx
     def artboard(color):
         tur.turtle = turtle.Turtle()
+        screen = turtle.Screen()
+        screen.title("VisualScript Art Window")
         tur.turtle.color(color)
         return
     def artColor(color):
@@ -105,6 +107,10 @@ def process_code(file):
         pass
     def webBackend():
         pass
+    def ArtBoardTitle(name):
+        screen = turtle.Screen()
+        screen.title(name)
+        return
 
     
     
