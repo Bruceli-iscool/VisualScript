@@ -99,6 +99,12 @@ def process_code(file):
     def windowTitle(title):
         window.title(title)
         return
+    def webCreate():
+        pass
+    def webButton():
+        pass
+    def webBackend():
+        pass
     
     
 
