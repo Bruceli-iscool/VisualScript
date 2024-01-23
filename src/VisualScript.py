@@ -5,6 +5,7 @@ import tkinter
 from tkinter import * 
 import turtle
 import matplotlib
+import django
 
 tur = turtle
 
@@ -18,7 +19,6 @@ def process_code(file):
 
         "log":"print",
         "ask": "input",
-        "define":"def",
         "convertInt":"int",
         "convertStr":"str",
         "else if":"elif",
@@ -105,6 +105,7 @@ def process_code(file):
         pass
     def webBackend():
         pass
+
     
     
 
