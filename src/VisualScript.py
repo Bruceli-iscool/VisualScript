@@ -4,7 +4,7 @@ from io import BytesIO
 import tkinter
 from tkinter import * 
 import turtle
-import matplotlib
+import matplotlib.pyplot as plt
 import django
 
 tur = turtle
@@ -96,21 +96,31 @@ def process_code(file):
     def ForeverRun():
         while True:
             pass
-    def chart(datasetx, datasety):
-        pass
+    def chartLine(datasetx, datasety, ytitle, xtitle):
+        plt.plot(datasetx, datasety)
+        plt.ylabel(ytitle)
+        plt.xlabel(xtitle)
+        plt.show()
+    def chartDot(datasetx, datasety, ytitle, xtitle):
+        plt.scatter(datasetx, datasety)
+        plt.xlabel(xtitle)
+        plt.ylabel(ytitle)
+    def chartScatter(datasetx, datasety):
+        timesx = len(datasetx)
+        for i in range(timesx):
+            plt.scatter(datasetx[i], datasety[i])
+                
     def windowTitle(title):
         window.title(title)
         return
-    def webCreate():
-        pass
-    def webButton():
-        pass
-    def webBackend():
-        pass
     def ArtBoardTitle(name):
         screen = turtle.Screen()
         screen.title(name)
         return
+    def ChartShow():
+        plt.show()
+        return
+    
 
     
     
@@ -139,16 +149,20 @@ def process_code(file):
             feature_func()
 
 
-print("VisualScipt\nEnter a filename or exit to exit")
+print("VisualScipt\nEnter a filename or license for license or help() for help or exit() to exit")
 if __name__ == "__main__":
     while True:
         filename = input(">>> ")
-        if filename.lower() == 'exit':
+        if filename.lower() == 'exit()':
             break
+        elif filename.lower() == 'help()':
+            print("\nexit() to exit or enter to go back\n")
+        elif filename.lower() == 'license':
+            print("\nVisualScript is lisensed under a MIT license.\nRead the terms here:\nhttps://github.com/Bruceli-iscool/VisualScript/blob/main/LICENSE\n")
         try:
             process_code(filename)
         except Exception as e:
-            if len(filename) < 1:
+            if len(filename) < 1 or filename == 'help()' or filename == 'license':
                 pass
             else:
                 print(f"An error occurred: {e}")
