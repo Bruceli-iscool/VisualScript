@@ -1,0 +1,3 @@
+Variable declaration in VisualScript is very simple.
+x = "value"
+It works the same as Python

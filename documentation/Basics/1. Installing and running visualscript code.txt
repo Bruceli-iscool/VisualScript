@@ -1,0 +1,14 @@
+Installing VisualScript is simple. 
+Download the latest release from here:
+https://github.com/Bruceli-iscool/VisualScript/releases/tag/1.0.1
+Then extract the zip file.
+Your done!
+To code VisualScript all you need is notepad.
+We, however, prefer Visual Studio Code. 
+To start create a file with an .vs extension.
+Then code in it. 
+More about that in later chapters.
+Then find the VisualScript executable.
+Enter the path to your code.
+It should run.
+Also, you can use built in commands for help.

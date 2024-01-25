@@ -1,0 +1,10 @@
+After you have installed VisualScript you can start coding!
+The most basic feature is log()
+usage:
+  log("Hello World")
+This buts Hello World on the console.
+Then there is an advanced version of log:
+logf
+logf prints a formated string to the terminal.
+usage:
+  logf("Hello ", "John") 

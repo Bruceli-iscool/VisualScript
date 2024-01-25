@@ -5,7 +5,7 @@ import tkinter
 from tkinter import * 
 import turtle
 import matplotlib.pyplot as plt
-import django
+import sys
 
 tur = turtle
 
@@ -28,7 +28,11 @@ def process_code(file):
         "f":"format",
         "x=":"!=",
         "delete":"del",
-        "with_name":"as"
+        "with_name":"as",
+        "function":"def",
+        "toLowerCase":"lower",
+        "toUpperCase":"upper",
+        
         
         
         
@@ -105,11 +109,16 @@ def process_code(file):
         plt.scatter(datasetx, datasety)
         plt.xlabel(xtitle)
         plt.ylabel(ytitle)
-    def chartScatter(datasetx, datasety):
+    def chartScatter(datasetx, datasety, xtitle, ytitle):
         timesx = len(datasetx)
         for i in range(timesx):
             plt.scatter(datasetx[i], datasety[i])
-                
+        plt.xlabel(xtitle)
+        plt.ylabel(ytitle)
+        plt.show
+    def chartTheme(theme):
+        plt.style(theme)
+        return
     def windowTitle(title):
         window.title(title)
         return
@@ -117,9 +126,27 @@ def process_code(file):
         screen = turtle.Screen()
         screen.title(name)
         return
+    
     def ChartShow():
         plt.show()
         return
+    def logf(value, formatedvalue):
+        print(value+"{}".format(formatedvalue))
+        return
+    def returnMedian(list, chart):
+        sortedlist = sorted(list) 
+        middle_value = len(sortedlist) // 2
+        final = (sortedlist[middle_value] + sortedlist[~middle_value]) / 2  # Use / for average
+        if chart.lower() == 'y':
+            plt.plot(final, final)
+            plt.show()
+        else:
+            pass
+        return final
+    def exit():
+        sys.exit()
+    
+
     
 
     
