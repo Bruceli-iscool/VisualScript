@@ -4,5 +4,3 @@ x = returnMedian(list, "y")
 log(x)
 function print():
     log("hello world")
-content = "john"
-webPage("steve", "tim", "timmy")

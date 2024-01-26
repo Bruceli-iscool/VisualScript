@@ -7,7 +7,7 @@ import turtle
 import matplotlib.pyplot as plt
 import sys
 from statistics import *
-fro flask import *
+from flask import *
 import webbrowser
 
 tur = turtle
@@ -159,13 +159,13 @@ def process_code(file):
         sortedlist = sorted(list)
         meannum = sum(sortedlist) / len(sortedlist)
         return meannum
-    def webPage(title, header, content, contentt=None, contenttr=None, contentb=None, contenth=None, contentcb=None, cssfile=None, filename="index.html"):
+    def webPage(title=, header, content, contentt="", contenttr="", contentb="", contenth="", contentcb="", cssfile=None, filename="index.html"):
         filenamecustom = filename
         structure = f"""
         <!DOCTOTYPE html>
         <html>
         <head>
-            <titiel>{title}</title>
+            <title>{title}</title>
             <link rel="stylesheet" type="text/css" href="{cssfile}">
         </head>
         <body>
@@ -173,7 +173,7 @@ def process_code(file):
             <p>{content}</p>
             <p>{contentt}</p>
             <p>{contenttr}</p>
-            <p>{contenttb}</p>
+            <p>{contentb}</p>
             <p>{contenth}</p>
             <p>{contentcb}</p>
         </body>
