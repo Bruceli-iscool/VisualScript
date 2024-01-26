@@ -7,5 +7,7 @@ Start Contributing:
    Go Into the design subfolder
 
    find plans.txt
+
+   Would Be great if you could help writing documentation and/or practice questions.
    
 Happy Coding!
