@@ -157,6 +157,8 @@ def process_code(file):
         sortedlist = sorted(list)
         meannum = sum(sortedlist) / len(sortedlist)
         return meannum
+    
+    
 
 
 
