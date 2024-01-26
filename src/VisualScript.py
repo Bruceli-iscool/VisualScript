@@ -6,6 +6,7 @@ from tkinter import *
 import turtle
 import matplotlib.pyplot as plt
 import sys
+from statistics import *
 
 tur = turtle
 
@@ -32,6 +33,8 @@ def process_code(file):
         "function":"def",
         "toLowerCase":"lower",
         "toUpperCase":"upper",
+        "firstLetterUpper":"title",
+        "skip":"pass"
         
         
         
@@ -91,6 +94,7 @@ def process_code(file):
         return
     def artKey(function, key):
         tur.turtle.onkey(function, key)
+        tur.turtle.listen()
         return
     def artStatic(feature):
         if feature == "stamp":
@@ -136,16 +140,32 @@ def process_code(file):
     def returnMedian(list, chart):
         sortedlist = sorted(list) 
         middle_value = len(sortedlist) // 2
-        final = (sortedlist[middle_value] + sortedlist[~middle_value]) / 2  # Use / for average
+        final = (sortedlist[middle_value] + sortedlist[~middle_value]) / 2 
         if chart.lower() == 'y':
-            plt.plot(final, final)
+            plt.scatter(final, final)
             plt.show()
         else:
             pass
         return final
     def exit():
         sys.exit()
-    
+    def returnMode(list):
+        sortedlist = sorted(list)
+        avg = mode(sortedlist)
+        return avg
+    def returnMean(list):
+        sortedlist = sorted(list)
+        meannum = sum(sortedlist) / len(sortedlist)
+        return meannum
+
+
+
+
+
+            
+
+        
+        
     
 
     
