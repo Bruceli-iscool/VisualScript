@@ -159,13 +159,13 @@ def process_code(file):
         sortedlist = sorted(list)
         meannum = sum(sortedlist) / len(sortedlist)
         return meannum
-    def webPage(title, header, content, contentt=None, contenttr=None, contentb=None, contenth=None, contentcb=None, cssfile=None, filename="index.html"):
+    def webPage(title=, header, content, contentt="", contenttr="", contentb="", contenth="", contentcb="", cssfile=None, filename="index.html"):
         filenamecustom = filename
         structure = f"""
         <!DOCTOTYPE html>
         <html>
         <head>
-            <titiel>{title}</title>
+            <title>{title}</title>
             <link rel="stylesheet" type="text/css" href="{cssfile}">
         </head>
         <body>

@@ -166,7 +166,7 @@ def process_code(file):
         <html>
         <head>
             <title>{title}</title>
-            <link rel="stylesheet" type="text/css" href="{cssfile}">
+            <link rel="stylesheet" type="text/css/scss" href="{cssfile}">
         </head>
         <body>
             <h1>{header}</h1>
