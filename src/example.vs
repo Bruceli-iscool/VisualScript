@@ -5,4 +5,5 @@ log(x)
 function print():
     log("hello world")
 content = "john"
-webPage("steve", "tim", "timmy")
+webPage("main.html")
+webPageStyles("styles.css")

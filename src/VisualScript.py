@@ -159,7 +159,7 @@ def process_code(file):
         sortedlist = sorted(list)
         meannum = sum(sortedlist) / len(sortedlist)
         return meannum
-    def webPageStatic(title=, header, cssfile=None, filename="index.html", content, contentt="", contenttr="", contentb="", contenth="", contentcb=""):
+    def webPageStatic(title=, header, cssfile=None, filename="index.html", content, contentt="", contenttr="", contentb="", contenth="", contentcb="", cb="0"):
         filenamecustom = filename
         structure = f"""
         <!DOCTOTYPE html>
@@ -236,9 +236,9 @@ def process_code(file):
             html.append(structure)
     def webPageSound(filename, soundfileCB):
         structure = """
-         <audio>
+          <audio>
              <source src={soundfileCB} type="audio/mpeg">
-         </audio>
+          </audio>
         """
         with open(filename, "a") as html:
             html.append(structure)
@@ -260,7 +260,7 @@ def process_code(file):
         """
         with open(filename, "a") as html:
             html.append(structure)
-
+    
 
     def webPageStart(filename):
         # opens html files only
