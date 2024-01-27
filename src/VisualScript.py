@@ -159,7 +159,7 @@ def process_code(file):
         sortedlist = sorted(list)
         meannum = sum(sortedlist) / len(sortedlist)
         return meannum
-    def webPage(title=, header, content, contentt="", contenttr="", contentb="", contenth="", contentcb="", cssfile=None, filename="index.html"):
+    def webPageStatic(title=, header, cssfile=None, filename="index.html", content, contentt="", contenttr="", contentb="", contenth="", contentcb=""):
         filenamecustom = filename
         structure = f"""
         <!DOCTOTYPE html>
@@ -183,12 +183,45 @@ def process_code(file):
         with open(filename, "w") as html:
             html.write(structure)
         webbrowser.open(filename)
+    def webPage(filename):
+        structure = f"""
+        <!DOCTOTYPE html>
+        <html>
+        <head>
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageTitle(filename, titleCB):
+        structure = f"""
+        \n<title>{titleCB}</title>\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageStyles(filename, cssfile+None):
+        structure = f"""
+        \n<link rel="stylesheet" type="text/css/scss" href="{cssfile}">\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageBody(filename):
+        structure = f"""
+        </head>
+        <body>
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageHeader(filename, headerCB):
+        structure = f"""
+        \n<h1>{headerCB}</h1>\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageContent()
 
     def webPageStart(filename):
         # opens html files only
         webbrowser.open(filename)
     
-
 
 
 
