@@ -216,7 +216,34 @@ def process_code(file):
         """
         with open(filename, "a") as html:
             html.append(structure)
-    def webPageContent()
+    def webPageContent(filename, contentCB):
+        structure = f"""
+        \n<p>{filename}</p>\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageContacts(filename, infoCB):
+        structure = f"""
+        \n<address>{infoCB}</address>\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageLinks(filename, link, textCB):
+        structure = """
+        \n <a href={link}>{textCB}</a>\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageSound(filename, soundfileCB):
+        structure = """
+        <audio>
+            <source src={soundfileCB} type="audio/mpeg">
+        </audio>
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+            
+
 
     def webPageStart(filename):
         # opens html files only
