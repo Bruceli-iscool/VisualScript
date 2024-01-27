@@ -236,13 +236,30 @@ def process_code(file):
             html.append(structure)
     def webPageSound(filename, soundfileCB):
         structure = """
-        <audio>
-            <source src={soundfileCB} type="audio/mpeg">
-        </audio>
+         <audio>
+             <source src={soundfileCB} type="audio/mpeg">
+         </audio>
         """
         with open(filename, "a") as html:
             html.append(structure)
-            
+    def webPageBGsound(filename, soundfileCB):
+        structure = f"""
+        \n<bgsound src={soundfileCB}/>\n
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageBodyClosure(filename):
+        structure = f"""
+        </body>
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
+    def webPageclose(filename):
+        structure = f"""
+        </html>
+        """
+        with open(filename, "a") as html:
+            html.append(structure)
 
 
     def webPageStart(filename):
