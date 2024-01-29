@@ -159,7 +159,7 @@ def process_code(file):
         sortedlist = sorted(list)
         meannum = sum(sortedlist) / len(sortedlist)
         return meannum
-    def webPageStatic(title=, header, cssfile=None, filename="index.html", content, contentt="", contenttr="", contentb="", contenth="", contentcb="", cb="0"):
+    def webPageStatic(title="", header="", cssfile=None, filename="index.html", content="", contentt="", contenttr="", contentb="", contenth="", contentcb="", cb="0"):
         filenamecustom = filename
         structure = f"""
         <!DOCTOTYPE html>
@@ -190,50 +190,50 @@ def process_code(file):
         <head>
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageTitle(filename, titleCB):
         structure = f"""
         \n<title>{titleCB}</title>\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
-    def webPageStyles(filename, cssfile+None):
+            html.write(structure)
+    def webPageStyles(filename, cssfile=None):
         structure = f"""
         \n<link rel="stylesheet" type="text/css/scss" href="{cssfile}">\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageBody(filename):
         structure = f"""
         </head>
         <body>
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageHeader(filename, headerCB):
         structure = f"""
         \n<h1>{headerCB}</h1>\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageContent(filename, contentCB):
         structure = f"""
         \n<p>{filename}</p>\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageContacts(filename, infoCB):
         structure = f"""
         \n<address>{infoCB}</address>\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageLinks(filename, link, textCB):
         structure = """
         \n <a href={link}>{textCB}</a>\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageSound(filename, soundfileCB):
         structure = """
           <audio>
@@ -241,25 +241,25 @@ def process_code(file):
           </audio>
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageBGsound(filename, soundfileCB):
         structure = f"""
         \n<bgsound src={soundfileCB}/>\n
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageBodyClosure(filename):
         structure = f"""
         </body>
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     def webPageclose(filename):
         structure = f"""
         </html>
         """
         with open(filename, "a") as html:
-            html.append(structure)
+            html.write(structure)
     
 
     def webPageStart(filename):
